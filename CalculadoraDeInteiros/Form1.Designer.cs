@@ -43,7 +43,7 @@
             btn_sub = new Button();
             btn_mult = new Button();
             btn_div = new Button();
-            numero_temp = new TextBox();
+            display = new TextBox();
             SuspendLayout();
             // 
             // btn_3
@@ -196,20 +196,20 @@
             btn_div.UseVisualStyleBackColor = true;
             btn_div.Click += btn_div_Click;
             // 
-            // numero_temp
+            // display
             // 
-            numero_temp.Location = new Point(78, 113);
-            numero_temp.Name = "numero_temp";
-            numero_temp.Size = new Size(303, 31);
-            numero_temp.TabIndex = 15;
-            numero_temp.TextChanged += numero_temp_TextChanged;
+            display.Location = new Point(78, 113);
+            display.Name = "display";
+            display.Size = new Size(303, 31);
+            display.TabIndex = 15;
+            display.TextChanged += numero_temp_TextChanged;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(520, 622);
-            Controls.Add(numero_temp);
+            Controls.Add(display);
             Controls.Add(btn_div);
             Controls.Add(btn_mult);
             Controls.Add(btn_sub);
@@ -248,6 +248,6 @@
         private Button btn_sub;
         private Button btn_mult;
         private Button btn_div;
-        private TextBox numero_temp;
+        private TextBox display;
     }
 }

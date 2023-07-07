@@ -15,7 +15,7 @@ namespace CalculadoraDeInteiros
         {
             num_temp = (num_temp * 10) + num;
 
-            numero_temp.Text = num_temp.ToString();
+            display.Text = num_temp.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -114,16 +114,16 @@ namespace CalculadoraDeInteiros
             switch (operacao)
             {
                 case "+":
-                    numero_temp.Text = Convert.ToString(resultado + num_temp); break;
+                    display.Text = Convert.ToString(resultado + num_temp); break;
 
                 case "-":
-                    numero_temp.Text = Convert.ToString(resultado - num_temp); break;
+                    display.Text = Convert.ToString(resultado - num_temp); break;
 
                 case "*":
-                    numero_temp.Text = Convert.ToString(resultado * num_temp); break;
+                    display.Text = Convert.ToString(resultado * num_temp); break;
 
                 case "/":
-                    numero_temp.Text = Convert.ToString(resultado / num_temp); break;
+                    display.Text = Convert.ToString(resultado / num_temp); break;
             }
 
             resultado = 0;
