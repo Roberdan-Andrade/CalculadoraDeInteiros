@@ -20,10 +20,38 @@ namespace CalculadoraDeInteiros
 
         private void DigitaOperacao(string operador)
         {
-            resultado = num_temp;
+            if(operacao != "")
+            {
+                CalculaResultado();
+            }
+            else
+            {
+                resultado = num_temp;
+            }
+
             num_temp = 0;
 
             operacao = operador;
+        }
+
+        private void CalculaResultado()
+        {
+            switch (operacao)
+            {
+                case "+":
+                    resultado = resultado + num_temp; break;
+
+                case "-":
+                    resultado = resultado - num_temp; break;
+
+                case "*":
+                    resultado = resultado * num_temp; break;
+
+                case "/":
+                    resultado = resultado / num_temp; break;
+            }
+
+            display.Text = Convert.ToString(resultado);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -103,20 +131,7 @@ namespace CalculadoraDeInteiros
 
         private void btn_igual_Click(object sender, EventArgs e)
         {
-            switch (operacao)
-            {
-                case "+":
-                    display.Text = Convert.ToString(resultado + num_temp); break;
-
-                case "-":
-                    display.Text = Convert.ToString(resultado - num_temp); break;
-
-                case "*":
-                    display.Text = Convert.ToString(resultado * num_temp); break;
-
-                case "/":
-                    display.Text = Convert.ToString(resultado / num_temp); break;
-            }
+            CalculaResultado();
 
             resultado = 0;
             num_temp = 0;
