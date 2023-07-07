@@ -18,6 +18,14 @@ namespace CalculadoraDeInteiros
             display.Text = num_temp.ToString();
         }
 
+        private void DigitaOperacao(string operador)
+        {
+            resultado = num_temp;
+            num_temp = 0;
+
+            operacao = operador;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             DigitaNumero(3);
@@ -75,38 +83,22 @@ namespace CalculadoraDeInteiros
 
         private void btn_soma_Click(object sender, EventArgs e)
         {
-            resultado = num_temp;
-
-            operacao = "+";
-
-            num_temp = 0;
+            DigitaOperacao("+");
         }
 
         private void btn_sub_Click(object sender, EventArgs e)
         {
-            resultado = num_temp;
-
-            operacao = "-";
-
-            num_temp = 0;
+            DigitaOperacao("-");
         }
 
         private void btn_mult_Click(object sender, EventArgs e)
         {
-            resultado = num_temp;
-
-            operacao = "*";
-
-            num_temp = 0;
+            DigitaOperacao("*");
         }
 
         private void btn_div_Click(object sender, EventArgs e)
         {
-            resultado = num_temp;
-
-            operacao = "/";
-
-            num_temp = 0;
+            DigitaOperacao("/");
         }
 
         private void btn_igual_Click(object sender, EventArgs e)
